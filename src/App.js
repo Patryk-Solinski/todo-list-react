@@ -10,7 +10,7 @@ import Container from './Container';
 
 const tasks = [
   { id: 1, content: "przejść na reacta", done: false },
-  { id: 2, content: "Lorem ipmssum sssdneofjnrojfnaorinfoantgonstgojsnrtbnsortbnoristobi", done: true },
+  { id: 2, content: "Lorem ipmssum ", done: true },
 ];
 
 const hideDoneTasks = false;
