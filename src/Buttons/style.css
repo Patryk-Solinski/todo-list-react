@@ -1,0 +1,15 @@
+.buttons__button {
+    border: none;
+    background-color: transparent;
+    color: hsl(180, 100%, 25%);
+    transition: color 0.8s;
+    font-size: 15px;
+}
+
+.buttons__button:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    color: #ccc;
+}
