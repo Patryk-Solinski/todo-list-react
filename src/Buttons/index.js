@@ -2,7 +2,7 @@ import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTasks }) => (
 
-  <div className="headerButtons">
+  <div className="buttons">
     {tasks.length > 0 && (
       <>
         <button className="buttons__button">
