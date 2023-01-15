@@ -5,7 +5,7 @@ const Tasks = ({ tasks, hideDone }) => (
         {tasks.map(task => (
             <li
                 key={task.id}
-                className={`tasks__item${task.done && hideDone ? "list__tasks--hidden" : ""}`}>
+                className={`tasks__item${task.done && hideDone ? " tasks__item--hidden" : ""}`}>
                 <button
                     className="task__button task__button--done">
                     {task.done ? "✓" : " "}
