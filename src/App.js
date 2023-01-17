@@ -8,7 +8,7 @@ import Container from './Container';
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
+  let [tasks, setTasks] = useState([
     { id: 1, content: "przejść na reacta", done: false },
     { id: 2, content: "kupić pomarańcze ", done: true },
   ]);
@@ -37,13 +37,26 @@ function App() {
     })));
   };
 
+  const addNewTask = (content) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      },
+    ]);
+  };
+
 
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form />}
+        body={<Form 
+        addNewTask={addNewTask}
+        />}
       />
       <Section
         title="Lista zadań"
