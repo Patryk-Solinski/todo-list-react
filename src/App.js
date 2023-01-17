@@ -8,7 +8,7 @@ import Container from './Container';
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  let [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState([
     { id: 1, content: "przejść na reacta", done: false },
     { id: 2, content: "kupić pomarańcze ", done: true },
   ]);
@@ -16,7 +16,7 @@ function App() {
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {
-        return { ...tasks, done: !task.done };
+        return { ...task, done: !task.done };
       }
       return task;
     }));
