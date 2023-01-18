@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App.](https://github.com/facebo
 
 ## How it works
 
-
+[!how works currency converter](https://github.com/Patryk-Solinski/todo-list-react/blob/master/public/todo-list.gif?raw=true)
 
 ## Technologies used in the homepage:
 - HTML
