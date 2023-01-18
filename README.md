@@ -1,7 +1,5 @@
 # To-do list react
 
-![To-do list react](https://github.com/Patryk-Solinski/todo-list-react/blob/master/public/website_todo-list-react.png?raw=true)
-
 ## Demo
 [Visit my To-do list react](https://patryk-solinski.github.io/todo-list-react/)
 
@@ -9,6 +7,10 @@
 This is another version of to-do list created as part of YouCode course.
 
 This project was bootstrapped with [Create React App.](https://github.com/facebook/create-react-app)
+
+## How it works
+
+
 
 ## Technologies used in the homepage:
 - HTML
