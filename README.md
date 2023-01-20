@@ -1,7 +1,7 @@
 # To-do list react
 
 ## Demo
-[Visit my To-do list react](https://patryk-solinski.github.io/todo-list-react/)
+[Visit my To-do list react](https://solinskideveloper.github.io/todo-list-react/)
 
 ## Description
 This is another version of to-do list created as part of YouCode course.
