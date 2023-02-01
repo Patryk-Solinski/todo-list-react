@@ -15,7 +15,6 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map( task=>task.id === id ? 
     {...task, done: !task.done }:
