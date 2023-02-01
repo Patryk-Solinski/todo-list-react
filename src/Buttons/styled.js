@@ -12,7 +12,7 @@ export const ListButtons = styled.div`
     }
 `;
 
-export const LButton = styled.button`
+export const Button = styled.button`
     border: none;
     background-color: transparent;
     color: hsl(180, 100%, 25%);
