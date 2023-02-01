@@ -1,32 +1,34 @@
 import "./style.css";
+import { List, Item, Content } from "./styled";
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-    <ul className="tasks">
-        {tasks.map(task => (
-            <li
-                key={task.id}
-                className={`tasks__item${task.done && hideDone ? " tasks__item--hidden" : ""}`}
+const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
+    return (
+        <List>
+            {tasks.map(task => (
+                <Item
+                    key={task.id}
+                    hidden={task.done && hideDone}
                 >
-                <button
-                    className="task__button task__button--done"
-                    onClick={() => toggleTaskDone(task.id)}
+                    <button
+                        className="task__button task__button--done"
+                        onClick={() => toggleTaskDone(task.id)}
                     >
-                    {task.done ? "✓" : " "}
-                </button>
-                <span className={`tasks__content${task.done ? " tasks__content--done" : ""}`
-                }>
-                    {task.id} - {task.content}
-                </span>
-                <button
-                    className="task__button task__button--remove"
-                    onClick={() => removeTask(task.id)}
-                > 🗑
+                        {task.done ? "✓" : " "}
+                    </button>
+                    <Content done={task.done}>
+                        {task.id} - {task.content}
+                    </Content>
+                    <button
+                        className="task__button task__button--remove"
+                        onClick={() => removeTask(task.id)}
+                    > 🗑
 
-                </button>
-            </li>
-        ))}
-    </ul>
+                    </button>
+                </Item>
+            ))}
+        </List>
+    )
 
-);
+};
 
 export default Tasks;
