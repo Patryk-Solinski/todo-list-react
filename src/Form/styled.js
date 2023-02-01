@@ -24,12 +24,9 @@ export const Button = styled.button`
     padding: 10px;
     transition: 0.7s;
 
-    & :hover {
+    &:hover {
         background-color: hsl(180, 100%, 30%);
         transform: scale(1.2);
     }
-
-    & :active {
-        background-color: hsl(180, 100%, 35%);
-    }
+    
 `;
