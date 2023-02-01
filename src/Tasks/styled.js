@@ -20,8 +20,42 @@ export const Item = styled.li`
 `;
 
 export const Content = styled.span`
-   word-break: break-word;
+    word-break: break-word;
 
-${({ done }) => done && css`
-     text-decoration: line-through;`}
+    ${({ done }) => done && css`
+      text-decoration: line-through;`}
+`;
+
+export const Button = styled.button`
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transition: background 0.8s;
+    
+
+    ${({ done }) => done && css`
+      background: hsl(120, 100%, 25%);
+      color: white; 
+
+      & :hover {
+        background: hsl(120, 100%, 30%);
+      }
+      & :active {
+        background: hsl(120, 100%, 35%);
+      }
+    `}
+      
+    ${({remove}) => remove && css `
+      background: hsl(0, 98%, 44%);
+
+      & :hover {
+        background: hsl(0, 98%, 50%);
+      }
+
+      & :active {
+        backbround:  hsl(0, 98%, 55%);s
+      }
+    `}
 `;
