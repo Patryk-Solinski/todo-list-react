@@ -35,27 +35,21 @@ export const Button = styled.button`
     transition: background 0.8s;
     
 
-    ${({ done }) => done && css`
-      background: hsl(120, 100%, 25%);
-      color: white; 
-
-      & :hover {
-        background: hsl(120, 100%, 30%);
-      }
-      & :active {
-        background: hsl(120, 100%, 35%);
+    ${({ done }) =>
+    done &&
+    css`
+      background-color: hsl(120, 100%, 25%);
+      &:hover {
+        background-color: hsl(120, 100%, 30%);
       }
     `}
-      
-    ${({remove}) => remove && css `
-      background: hsl(0, 98%, 44%);
-
-      & :hover {
-        background: hsl(0, 98%, 50%);
-      }
-
-      & :active {
-        backbround:  hsl(0, 98%, 55%);s
+    ${({ remove }) =>
+    remove &&
+    css`
+      background-color: hsl(0, 98%, 44%);
+      &:hover {
+        background-color: hsl(0, 98%, 50%);
       }
     `}
+   
 `;
