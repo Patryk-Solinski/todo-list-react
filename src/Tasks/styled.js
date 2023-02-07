@@ -12,7 +12,7 @@ export const Item = styled.li`
     grid-gap: 10px;
     padding: 15px;
     align-items: center;
-    border-bottom: 1px solid hsl(0, 10%, 89%);
+    border-bottom: 1px solid ${({theme}) => theme.color.alto};
 
     ${({ hidden }) => hidden && css`
        display: none;
@@ -28,7 +28,7 @@ export const Content = styled.span`
 
 export const Button = styled.button`
     border: none;
-    color: white;
+    color: ${({theme}) => theme.color.white};
     width: 30px;
     height: 30px;
     padding: 0;
@@ -36,15 +36,22 @@ export const Button = styled.button`
 `;
 
 export const ToggleDoneButton = styled(Button)`
-      background-color: hsl(120, 100%, 25%);
+      background-color: ${({theme}) => theme.color.forestGreen};
       &:hover {
-        background-color: hsl(120, 100%, 30%);
+        filter: brightness(110%)
+      }
+      &:active {
+        filter: brightness(120%)
       }
 `;
       
 export const RemovedButton = styled(Button)`
-      background-color: hsl(0, 98%, 44%);
+      background-color: ${({theme}) => theme.color.crimson};
       &:hover {
-        background-color: hsl(0, 98%, 50%);
+        filter: brightness(110%)
       }
+      &:active {
+        filter: brightness(120%)
+      }
+
 `;

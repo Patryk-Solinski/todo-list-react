@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TasksSection = styled.section`
     background: white;
     margin-bottom: 10px 0;
-    box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px ${({theme}) => theme.color.alto};;
     padding: 15px;
     margin-bottom: 10px;
 `;
@@ -12,7 +12,7 @@ export const Header = styled.header`
     font-size: 20px;
     padding: 20px;
     margin: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({theme}) => theme.color.alto};
     display: grid;
     grid-gap: 20px;
     grid-template-columns: auto auto;

@@ -5,7 +5,7 @@ export const ListButtons = styled.div`
     grid-template-columns: auto auto;
     grid-gap: 20px;
 
-    @media (max-width: 767px){
+    @media (max-width: ${({theme}) => theme.breakpoint.phone}px){
         grid-template-columns: auto;
         justify-content: center;
         grid-gap: 15px;
@@ -15,16 +15,16 @@ export const ListButtons = styled.div`
 export const Button = styled.button`
     border: none;
     background-color: transparent;
-    color: hsl(180, 100%, 25%);
+    color: ${({theme}) => theme.color.teal};
     transition: color 0.8s;
     font-size: 15px;
 
     &:hover {
-        color: hsl(180, 100%, 35%);
+        filter: brightness(110%);
     }
 
     &:disabled {
-        color: #ccc;
+        color: ${({theme}) => theme.color.silver};
         cursor: default;
     }
 `;
